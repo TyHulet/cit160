@@ -7,15 +7,22 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Vehicle Registration</title>
 	<link rel="stylesheet" href="css/vehicleregistration.css">
+<script>
+	function getTotalDue()
+	const totalAmountDue = 100;
+	let totaldue = 0 
+	totaldue = totalAmountDue - discount;
+	const discount = document.getElementById('discount').value;
+	document.getElementById('TotalAmountDue').innerHTML = TotalAmountDue;
+</script>
+
 <body>
 	<header>
 		<h1>Vehicle Registration</h1>
 		<script defer src="js/dates.js"></script>
 	</header>
 	<main>
-		<label for="fullname">Owner Full Name:
-
-		</label>
+		<label for="fullname">Owner Full Name:</label>
 		<input type="text" id="fullname">
 		<label for="make">Vehicle Make: </label>
 		<input type="text" id="make">
@@ -25,7 +32,9 @@
 		<input type="text" id="year">
 		<label for="discount">Discount Amount: </label>
 		<input type="number" id="discount">
-		<div class="processing"><button onclick="getTotalDue()">Compute Total</button></div>
+		<div class="processing"><button onclick="getTotalDue()">Compute Total</button>
+		<hr>
+		<p id= "TotalAmountDue"></p>
 		</div>
 	</main>
 	<footer>
