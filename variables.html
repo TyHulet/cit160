@@ -9,11 +9,15 @@
 	<link rel="stylesheet" href="css/vehicleregistration.css">
 	<script>
 		function getTotalDue() {
+			// DECLARTATIONS
 			const totalAmountDue = 100;
 			let TotalAmountDue = 0;
+			// INPUT - calcute the discount ammount
 			const discount = document.querySelector('#discount').value;
+			// PROCESSING 
 			TotalAmountDue = totalAmountDue - discount;
-			document.querySelector('#TotalAmountDue').innerHTML = `Total Amount Due: $${TotalAmountDue}.00`;
+			// OUTPUT
+			document.querySelector('#TotalAmountDue').innerHTML = `Total Amount Due: $${TotalAmountDue}.00.`;
 		}
 	</script>
 
