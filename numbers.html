@@ -12,7 +12,7 @@
 <body>
     <header>
         <h1>Sales Slip</h1>
-        <h2>Student Name</h2>
+        <h2>Tyler Hulet</h2>
     </header>
     <main>
         <h3>Line Items</h3>
@@ -70,8 +70,11 @@
             tax = parseFloat(document.querySelector('#tax').value);
 
             // PROCESSING
-            output = (q1 * p1 + q2 * p2 + q3 * p3) - discount + tax;
-
+            subtotal = q1 * p1 + q2 * p2 + q3 * p3;
+            dis1 = subtotal * discount; // How much to be discounted 
+            sub1 = subtotal - dis1; // New subtotal after the discount
+            tax1 = sub1 * tax; // Tax times new subtotal
+            output = sub1 + tax1; // Total after taxs
             //OUTPUT
             document.querySelector('#output').innerHTML = `Total Price Tag: $${output.toFixed(2)}`;
         }
