@@ -19,7 +19,7 @@
         <label class="heading">Name an animal: <input type="text" id="animal1" placeholder="horse"></label>
         <label class="heading">Name another animal: <input type="text" id="animal2" placeholder="lamb"></label>
     
-        <div class="process"><button onclick="___()">Build Story</button>
+        <div class="process"><button onclick="story()">Build Story</button>
         </div>
         <p id="output"></p>
     </main>
@@ -29,14 +29,17 @@
 
 <script>
     document.querySelector('#copyright').textContent = new Date().getFullYear();
-function ___() {
+function story() {
 	// INPUT
-	
+	let Name = document.getElementById('firstname').value;
+    let Fruit = document.getElementById('fruit').value;
+    let Animal1 = document.getElementById('animal1').value;
+    let Animal2 = document.getElementById('animal2').value;
 	// PROCESSING
-	 
-	
+	let Ostring = `And it came to pass the the people of ${Name} did till the land, and rise all manner of ${Fruit},`;
+	   
 	//OUTPUT - Example output: "And it came to pass that the people of ___ did till the land, and raise all manner of ___, and flocks of herds, and flocks of all manner of ___ of every kind, and ___."
-	 
+	document.getElementById('output').innerHTML = Ostring;
 }
 </script>
 </body>
