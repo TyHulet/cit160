@@ -15,9 +15,25 @@
         <h2> Tyler Hulet </h2>
     </header>
     <main>
-        <h3>Converter</h3>
+        <h3> Weight Converter</h3>
         <label class="Pounds">Pounds: <input type="text" id="pounds"></label>
-        <div class="process"><button onclick="___()">Convert to Kilograms</button>
+        <div class="process"><button onclick="convert()">Convert to Kilograms</button>
+        </div>
+        <p id="output"></p>
+    </main>
+    <footer>
+        &copy;<span id="copyright"></span> &bull; Tyler Hulet &bull; BYU-Idaho &bull; CIT 160
+    </footer>
+<script>
+    document.querySelector('#copyright').textContent = new Date().getFullYear();
+    function convert(){
+        //INPUT: taking the user input for the pounds to be converted using a parseFloat   
+        let pounds = parseFloat(document.querySelector('#pounds').value);  
+        //PROCESSING:
+
+        //OUTPUT: 
+    }
+</script>
 </body>
 
 </html>
