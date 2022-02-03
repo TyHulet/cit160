@@ -16,24 +16,25 @@
     </header>
     <main>
         <h3> Weight Converter</h3>
-        <label class="Pounds">Pounds: <input type="text" id="pounds"></label>
-        <div class="process"><button onclick="convert()">Convert to Kilograms</button>
+        <label class="Pounds">Pounds: <input type="number" id="Pounds"></label>
+        <div class="process"><button onclick="Convert()">Convert to Kilograms</button>
         </div>
         <p id="output"></p>
     </main>
     <footer>
         &copy;<span id="copyright"></span> &bull; Tyler Hulet &bull; BYU-Idaho &bull; CIT 160
     </footer>
-<script>
-    document.querySelector('#copyright').textContent = new Date().getFullYear();
-    function convert(){
-        //INPUT: taking the user input for pounds  to be converted using a parseFloat   
-        let pounds = parseFloat(document.querySelector('#pounds').value);  
-        //PROCESSING: calcute the pounds to kilograms, KG = LB/2.2046
-
-        //OUTPUT: return the pounds as kilograms.
-    }
-</script>
+    <script>
+        document.querySelector('#copyright').textContent = new Date().getFullYear();
+        function Convert() {
+            //INPUT: taking the user input for pounds  to be converted  using parseFloat 
+            let LB = parseFloat(document.getElementById('Pounds').value);
+            //PROCESSING: calculate the pounds to kilograms = LB/2.2046
+            output = LB/2.2046;
+            //OUTPUT: returns pounds as kilograms.
+            document.querySelector('#output').innerHTML = `Total Kilograms: ${output.toFixed(1)}`;
+        }
+    </script>
 </body>
 
 </html>
