@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pounds to Kilograms</title>
+    <link rel="stylesheet" href="css/strings.css">
+</head>
+
+<body>
+    <header>
+        <h1>Convert Pounds to Kilograms</h1>
+        <h2> Tyler Hulet </h2>
+    </header>
+    <main>
+        <h3> Weight Converter</h3>
+        <label class="Pounds">Pounds: <input type="number" id="Pounds"></label>
+        <div class="process"><button onclick="Convert()">Convert to Kilograms</button>
+        </div>
+        <p id="output"></p>
+    </main>
+    <footer>
+        &copy;<span id="copyright"></span> &bull; Tyler Hulet &bull; BYU-Idaho &bull; CIT 160
+    </footer>
+    <script>
+        document.querySelector('#copyright').textContent = new Date().getFullYear();
+        function Convert() {
+            //INPUT: taking the user input for pounds  to be converted  using parseFloat 
+            let LB = parseFloat(document.getElementById('Pounds').value);
+            //PROCESSING: calculate the pounds to kilograms = LB/2.2046
+            output = LB/2.2046;
+            //OUTPUT: returns pounds as kilograms.
+            document.querySelector('#output').innerHTML = `Total Kilograms: ${output.toFixed(1)}`;
+        }
+    </script>
+</body>
+
+</html>
