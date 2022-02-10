@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Volume of a cylinder</h1>
+    <label class="height">Height: <input type="number" id="height"></label>
+    <label class="raduis"> Raduis: <input type="number" id="raduis"></label>
+    <div class="process"><button onclick="volume()">cylinders Volume</button>
+    </div>
+    <p id="output"></p>;
+    <script>
+        function volume() {
+            // input: Takes the user input for height and raduis. 
+            let h = document.getElementById('height').value;
+            let r = documnent.getElementById('raduis').value;
+            //PROCESSING: V = pie * raduis * raduis * height
+            output = Math.PI * r ** h;
+            //OUTPUT: reutrns the volume wiht the input from the user.
+            document.querySelector('#output').innerHTML = `Cylinder Volume ${output}`;
+        }
+    </script>
+
+    </script>
+
+</body>
+
+</html>

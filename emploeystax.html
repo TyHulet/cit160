@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>employee's after tax pay</title>
+</head>
+
+<body>
+    <label class="Hours">Hours: <input type="number" id="Rhours"></label>
+    <label class="Overtime"> Overtime: <input type="number" id="overtime"></label>
+    <div class="process"><button onclick="payout()">calcute after tax pay</button>
+    </div>
+    <p id="output"></p>
+    <script>
+        function payout() {
+            // DECLARTATIONS: the tax rate is constant at 15%
+            const tax = .15;
+            // input: Takes the user regular hours as rhours and overtime hours as overtime.
+            let rhours = parseFloat(document.getElementById('Rhours').value);
+            let overhours = parseFloat(document.getElementById('overtime').value);
+            //PROCESSING: The pay out would be tax( 15 * rhours + 22.50 + overhours)
+            output = 15 * rhours + 22.50 * overhours * tax;
+            //OUTPUT: the employs pay out after clicking on the button.
+            document.querySelector('#output').innerHTML = `Total after Taxs: $${output.toFixed(2)}`;
+
+        }
+    </script>
+</body>
+<h1>Pay after Tax</h1>
+</html>
