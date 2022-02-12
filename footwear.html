@@ -13,7 +13,7 @@
     <select id="weather">
         <option value="" selected disabled>--
             Select Weather type--</option>
-        <option value="Sunny">Sunny</option>
+        <option value="unknown">unknown</option>
         <option value="Hot">Hot</option>
         <option value="Rain">Rain</option>
         <option value="Snow">Snow</option>
@@ -28,7 +28,7 @@
             let weather = document.querySelector('#weather').value;
             // Processing - making a choice and returning the message
             let choice = weather
-            if (weather === 'Sunny') {
+            if (weather === 'unknown') {
                 footwear = 'Shoes';
             } else if (weather === 'Hot') {
                 footwear = 'Sandals';
