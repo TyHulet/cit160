@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Shoes</title>
+    <link rel="stylesheet" href="css/strings.css">
 </head>
 
 <body>
@@ -24,9 +25,9 @@
 
     <script>
         function foot() {
-            // input - get operand and get answer
+            // input - get the weather type
             let weather = document.querySelector('#weather').value;
-            // Processing - making a choice and returning the message
+            // Processing - Taking the users choice and returning the type of shoe
             let choice = weather
             if (weather === 'unknown') {
                 footwear = 'Shoes';
@@ -37,7 +38,6 @@
             else {
                 footwear = 'Boots'
             }
-
             // OUTPUT - post message to user 
             document.querySelector('#footwear').textContent = footwear;
         }
