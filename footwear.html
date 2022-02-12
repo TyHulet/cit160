@@ -1,57 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Shoes</title>
 </head>
+
 <body>
     <h1>What is the Weather?</h1>
-    <select id="operand">
+    <select id="weather">
         <option value="" selected disabled>--
             Select Weather type--</option>
-        <option value="Unknown">Unknown</option>
+        <option value="Sunny">Sunny</option>
         <option value="Hot">Hot</option>
         <option value="Rain">Rain</option>
         <option value="Snow">Snow</option>
     </select>
-    <hr>
-    <button onclick="checkmath()">Check</button>
-    <hr>
-    <p id="weather"></p>
+    <div class="process"><button onclick="foot()">Types of Shoes</button>
+    </div>
+    <p id="footwear"></p>
 
     <script>
-        const Max = 11;
-        let num1 = Math.floor(Math.random() * Max);
-        let num2 = Math.floor(Math.random() * Max);
-        document.querySelector('#num1').textContent = ` ${num1} `;
-        document.querySelector('#num2').textContent = ` ${num2} `;
-
-        function checkmath() {
+        function foot() {
             // input - get operand and get answer
-            let operand = document.querySelector('#operand').value;
-            let userAnswer = parseInt(document.querySelector('#answer').value);
-            // processing - if + then set answer key to addition or set it to subtraction // compare answer key to the input anser and build appr.message
-            let answerKey = 0;
-            let message = '';
-
-            // determine answerKey
-            if (operand === "+") {
-                answerKey = num1 + num2;
-            } else {
-                answerKey = num1 - num2;
-            }
-            // determine message     
-            if (answerKey === userAnswer) {
-                message = `Correct! 🏆`;
-            } else {
-                message = `Incorrect! 😢`;
+            let weather = document.querySelector('#weather').value;
+            // Processing - making a choice and returning the message
+            let choice = weather
+            if (weather === 'Sunny') {
+                message = 'Shoes';
+            } else if (weather === 'Hot') {
+                message = 'sandals';
+            } else if (weather === 'Rain')
+                message = 'galoshes';
+            else {
+                message = 'Boots'
             }
 
             // OUTPUT - post message to user 
-            document.querySelector('#message').textContent = message;
+            document.querySelector('#footwear').textContent = message;
         }
     </script>
 </body>
+
 </html>
