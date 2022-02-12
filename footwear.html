@@ -7,6 +7,49 @@
     <title>Weather Shoes</title>
 </head>
 <body>
-    
+    <h1>What is the Weather?</h1>
+    <select id="operand">
+        <option value="Unknown">Unknown</option>
+        <option value="Hot">Hot</option>
+        <option value="Rain">Rain</option>
+        <option value="Snow">Snow</option>
+    </select>
+    <hr>
+    <button onclick="checkmath()">Check</button>
+    <hr>
+    <p id="weather"></p>
+
+    <script>
+        const Max = 11;
+        let num1 = Math.floor(Math.random() * Max);
+        let num2 = Math.floor(Math.random() * Max);
+        document.querySelector('#num1').textContent = ` ${num1} `;
+        document.querySelector('#num2').textContent = ` ${num2} `;
+
+        function checkmath() {
+            // input - get operand and get answer
+            let operand = document.querySelector('#operand').value;
+            let userAnswer = parseInt(document.querySelector('#answer').value);
+            // processing - if + then set answer key to addition or set it to subtraction // compare answer key to the input anser and build appr.message
+            let answerKey = 0;
+            let message = '';
+
+            // determine answerKey
+            if (operand === "+") {
+                answerKey = num1 + num2;
+            } else {
+                answerKey = num1 - num2;
+            }
+            // determine message     
+            if (answerKey === userAnswer) {
+                message = `Correct! 🏆`;
+            } else {
+                message = `Incorrect! 😢`;
+            }
+
+            // OUTPUT - post message to user 
+            document.querySelector('#message').textContent = message;
+        }
+    </script>
 </body>
 </html>
