@@ -29,17 +29,17 @@
             // Processing - making a choice and returning the message
             let choice = weather
             if (weather === 'Sunny') {
-                message = 'Shoes';
+                footwear = 'Shoes';
             } else if (weather === 'Hot') {
-                message = 'sandals';
+                footwear = 'Sandals';
             } else if (weather === 'Rain')
-                message = 'galoshes';
+                footwear = 'Galoshes';
             else {
-                message = 'Boots'
+                footwear = 'Boots'
             }
 
             // OUTPUT - post message to user 
-            document.querySelector('#footwear').textContent = message;
+            document.querySelector('#footwear').textContent = footwear;
         }
     </script>
 </body>
