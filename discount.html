@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sales Conditional Discount</title>
+    <link rel="stylesheet" href="css/strings.css">
+</head>
+
+<body>
+    <header>
+        <h1>Sales Conditional Discount </h1>
+        <h2>Tyler Hulet</h2>
+    </header>
+    <main>
+        <h3>Inputs</h3>
+        <label class="subtotal">Customer Subtotal: <input type="number" id="subtotal"></label>
+
+        <div class="process"><button onclick="Conditional()">Calculate</button>
+        </div>
+        <p id="output"></p>
+        <script>
+            function Conditional() {
+                // DECLARTATIONS: 
+                let subtotal = parseFloat(document.querySelector('#subtotal').value);
+                let salestax = .06;
+
+                // Input:
+                 tax = subtotal * salestax;
+                 output = subtotal + tax;
+                //OUTPUT:
+                document.querySelector('#output').innerHTML = `Total: $${output.toFixed(2)}`;
+            }
+        </script>
+
+    </main>
+    <footer>
+        &copy;<span id="copyright"></span> &bull; Tyler Hulet &bull; BYU-Idaho &bull; CIT 160
+    </footer>
+</body>
+
+</html>
