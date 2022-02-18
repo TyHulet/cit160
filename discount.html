@@ -21,24 +21,33 @@
         <div class="process"><button onclick="Conditional()">Calculate</button>
         </div>
         <p id="output"></p>
-        <script>
-            function Conditional() {
-                // DECLARTATIONS: 
-                let subtotal = parseFloat(document.querySelector('#subtotal').value);
-                let salestax = .06;
-
-                // Input:
-                 tax = subtotal * salestax;
-                 output = subtotal + tax;
-                //OUTPUT:
-                document.querySelector('#output').innerHTML = `Total: $${output.toFixed(2)}`;
-            }
-        </script>
 
     </main>
     <footer>
         &copy;<span id="copyright"></span> &bull; Tyler Hulet &bull; BYU-Idaho &bull; CIT 160
     </footer>
+    <script>
+        document.querySelector('#copyright').textContent = new Date().getFullYear();
+        function Conditional() {
+            // INPUT: 
+            const now = new Date();
+            let subtotal = parseFloat(document.querySelector('#subtotal').value);
+            let salestax = .06;
+            let Dis = .10
+            let total = 0
+            const theDay = now.getDay();
+            // PROCESSING
+            if (subtotal > 50 || (theDay === 2 || theDay === 3) ) {
+               total = subtotal * Dis;
+            } else {
+                total = subtotal 
+            }
+            tax = total * salestax; 
+            output = total + tax;
+            //OUTPUT:
+            document.querySelector('#output').innerHTML = `Total: $${output.toFixed(2)}`;
+        }
+    </script>
 </body>
 
 </html>
