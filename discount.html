@@ -36,10 +36,11 @@
             let Dis = .10;
             const theDay = now.getDay();
             discount = 0;
-            // PROCESSING
+            // PROCESSING: 
             if ((theDay === 2 || theDay === 3) && amount > 50) {
                 discount = amount * Dis;
             }
+           
             amount = amount - discount;
             tax = amount * salestax;
             output = amount + tax;
