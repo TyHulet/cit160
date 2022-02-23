@@ -15,8 +15,9 @@
     <Script>
         function Convert(){
         let text = "";
-        for (let i = 0; i <= 50; i++) {
-            text += "Item: " + i + "<br>";
+        let r = Math.floor(Math.random() * 50) + 1;
+        for (let n = 1; n <= r; n++) {
+            text += "Item: " + n + "<br>";
         }
 
         document.getElementById("demo").innerHTML = text;
