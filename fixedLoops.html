@@ -9,24 +9,18 @@
 </head>
 
 <body>
-    <label><button onclick="check()">Display 1</button></label>
-    <p id="display1"></p>
+<p id="display1"></p>
     <script>
-        function check() {
             let output1 = '';
             let i = 0;
             while (i < 2) {
                 output1 += `Part 1:${i++}<br>`;
             }
             document.getElementById('display1').innerHTML = output1;
-        }
-        </script>
        
-</body>
-
-</html>
+    </script>
+       <p id="display2"></p>
 <script>
-    function check() {
         var output2 = '';
         for (let j = 0; j > 3; j++) {
             if (j == 2) {
@@ -37,6 +31,7 @@
             }
         }
         document.getElementById('display2').textContent = output2;
-
-    }
 </script>
+
+</body>
+</html>
