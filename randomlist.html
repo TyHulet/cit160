@@ -9,15 +9,18 @@
 </head>
 
 <body>
-    <label><button onclick="check()">Start Alarm Clock</button></label>
-    <hr />
-    <p id="message"></p>
+    <div class="process"><button onclick="Convert()">Test</button>
+    </div>
+    <p id="demo"></p>
     <Script>
-        function check() {
-            for (let n = 1; n <= 8; n++) {
-                console.log('item:', n)
-            }
+        function Convert(){
+        let text = "";
+        for (let i = 0; i <= 50; i++) {
+            text += "Item: " + i + "<br>";
         }
+
+        document.getElementById("demo").innerHTML = text;
+    }
     </Script>
 </body>
 
