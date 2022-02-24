@@ -10,6 +10,7 @@
 
 <body>
     <h1>Fix Loop Structures</h1>
+    <h2>Display 1</h2>
     <p id="display1"></p>
     <script>
         let output1 = '';
@@ -20,6 +21,7 @@
         document.getElementById('display1').innerHTML = output1;
 
     </script>
+    <h3>Display 2</h3>
     <p id="display2"></p>
     <script>
         var output2 = '';
@@ -33,7 +35,7 @@
         }
         document.getElementById('display2').textContent = output2;
     </script>
-
+    <h4>Display 3</h4>
     <p id="display3"></p>
     <script>
         let output3 = '';
@@ -42,7 +44,7 @@
         }
         document.getElementById('display3').textContent = output3;
     </script>
-    
+<h5>Display 4</h5>
     <p id="display4"></p>
     <script>
         let balance = 1000;
@@ -50,7 +52,7 @@
         let n = 30;
         for (let s = 0; s < n; s++) {
             interest = balance * rate;
-        balance += interest;
+            balance += interest;
         }
         document.getElementById('display4').textContent = balance.toFixed(2);
     </script>
