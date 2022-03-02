@@ -7,15 +7,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-
+<button onclick="timesTable()">Fives Times Table</Table></button>
 <body>
     <p id = "demo"></p> 
 <script>
-    text = '';
-    for (let n = 1; n <= 12; n){
-        console.log(n); 
+    function timesTable(){
+    let text = ""
+    for (let n = 1; n <= 12; n++){
+        text += "5 x " + n + " = " + 5 * n + "<br>"; 
       }
-      //document.getElementById("demo").innerHTML = text;
+      document.getElementById("demo").innerHTML = text;
+    }
 </script>
     
 </body>
