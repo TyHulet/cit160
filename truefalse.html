@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <title>Title</title>
+</head>
+
+<body>
+    <p>Please enter two numbers:</p>
+    <input type="text" id="one" size="5"><br>
+    <input type="text" id="two" size="5">
+    <button type="button" onclick="TrueFalse()">Click</button>
+    <div id="Output"></div>
+
+    <script>
+        function TrueFalse() {
+            //* Input:
+            let One = document.getElementById("one").value;
+            let Two = document.getElementById("two").value;
+            let sum = One + Two;
+            let statement = ""
+            //* Processing:
+            if ((One > 5 && Two > 5) || sum > 20) {
+                statement = "True";
+            
+            }else {
+                statement = "False";
+            }
+                //* Output:
+         document.getElementById("Output").textContent = statement; 
+        }
+    
+    </script>
+</body>
+
+</html>
