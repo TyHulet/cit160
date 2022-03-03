@@ -20,10 +20,18 @@
     <p id="output"></p>
     <script>
         function divsion() {
-            let start = parseInt(document.getElementById("Start").value);
-            let end = parseInt(document.getElementById("End").value);
-            let divisor = parseInt(document.getElementById("Divisor").value)
+            let start = document.getElementById("Start").value;
+            let end = document.getElementById("End").value;
+            let divisor = document.getElementById("Divisor").value;
             output = "";
+            if (start <= end) {
+                for (i = start; i <= end; i++) {
+                    let num = i % divisor
+                    if (num == 0)
+                        output += i + " ";
+                }
+            }
+            document.getElementById("output").textContent = output;
         }
     </script>
 
