@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam Question 3</title>
+</head>
+
+<body>
+    <div>
+        <label class="start">Start: <input type="number" id="Start"></label>
+    </div>
+    <div> <label class="end">End: <input type="number" id="End"></label>
+    </div>
+    <label class="divisor">Divisor: <input type="number" id="Divisor"></label>
+    <div class="process"><button onclick="divsion()">Click</button>
+    </div>
+    <p id="output"></p>
+    <script>
+        function divsion() {
+            let start = parseInt(document.getElementById("Start").value);
+            let end = parseInt(document.getElementById("End").value);
+            let divisor = parseInt(document.getElementById("Divisor").value)
+            output = "";
+        }
+    </script>
+
+</body>
+
+</html>
