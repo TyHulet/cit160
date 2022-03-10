@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wind Chill</title>
+    <link rel="stylesheet" href="css/strings.css">
+</head>
+
+<body>
+    <header>
+        <h1>Wind Chill </h1>
+    </header>
+    <main>
+        <label>Enter the tempture: <input type="text" id="temperature"></label> <br>
+        <label>Enter the Wind Speed: <input type="text" id="windspeed"></label> <br>
+        <button onclick="doInputOutput()">Sum Them Up</button>
+         <div id="wind"></div>
+    </main>
+    <footer>
+        &copy;<span id="copyright"></span> &bull; Tyler Hulet &bull; BYU-Idaho &bull; CIT 160
+    </footer>
+    <script>
+        document.querySelector('#copyright').textContent = new Date().getFullYear();
+    function doInputOutput(){
+        
+    }
+    
+    </script>
+</body>
+
+</html>
