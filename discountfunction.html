@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discount Function</title>
+</head>
+
+<body>
+    <h1>Discount Function</h1>
+    <label for="subtotal"><input type="text" id="subtotal"></label>
+    <button oneclick="processTotal()">process Total</button>
+    <div id="total"></div>
+
+    <script>
+        function processTotal() {
+            //declarations
+            let total = 0;
+            // input
+            let subtotal = parseFloat(document.querySelector('#subtotal').value);
+            // determine if there is a day discount
+            let discount = dayDiscount();
+            subtotal = subtotal * (1 - discount);
+            // determine if there is an amount disocunt
+            // add the tax
+            // display total
+            document.querySelector('#total').innerhtml = total;
+        }
+
+        function dayDiscount() {
+            let discount = 0;
+            let dayofweek = new Date.getday();
+            switch (dayofweek) {
+                case 1:
+                    discount = .10;
+                    break;
+                    case 2:
+                    discount = .15;
+                    break;
+                    case 3:
+                    discount = .20;
+                    break;
+                    case 4:
+                    discount = .15;
+                    break;
+                    case 5:
+                    discount = .05;
+                    break;
+            }
+            return discount;
+        }
+    </script>
+</body>
+
+</html>
