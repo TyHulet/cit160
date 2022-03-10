@@ -19,7 +19,7 @@
             <option value=".05">Nevada</option>
         </select>
         </label><br><br>
-    <button oneclick="processTotal()">process Total</button>
+    <button onclick="processTotal()">process Total</button>
 
     <div id="total"></div>
 
@@ -39,7 +39,7 @@
             // add the tax
             total = total + total * statetax;
             // display total
-            document.getElementById('total').innerHTML = `Total Amount Due: $${total.tofixed(2)}`;
+            document.querySelector('#total').innerHTML = `Total Amount Due: $${total.toFixed(2)}`;
         }
 
         function amountDiscount(st) {
@@ -53,7 +53,7 @@
         function dayDiscount() {
             let d = new Date();
             let discount = 0;
-            let dayofweek = d.getday();
+            let dayofweek = d.getDay();
             switch (dayofweek) {
                 case 1:
                     discount = .10;
