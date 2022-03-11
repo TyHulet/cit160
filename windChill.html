@@ -14,10 +14,10 @@
         <h1>Wind Chill </h1>
     </header>
     <main>
-        <label>Enter the tempture: <input type="text" id="temperature"></label> <br>
-        <label>Enter the Wind Speed: <input type="text" id="windspeed"></label> <br>
-        <button onclick="doInputOutput()">Press For WindChill</button>
-         <div id="wind"></div>
+        <label>Temperature: <input type="text" id="temp"></label> <br>
+        <label>Wind Speed: <input type="text" id="wind"></label> <br>
+        <button onclick="doInputOutput()">Wind Chill</button>
+         <div id="output"></div>
     </main>
     <footer>
         &copy;<span id="copyright"></span> &bull; Tyler Hulet &bull; BYU-Idaho &bull; CIT 160
@@ -25,7 +25,10 @@
     <script>
         document.querySelector('#copyright').textContent = new Date().getFullYear();
     function doInputOutput(){
-        
+        let temperature = parseFloat(document.querySelector('#temp').value);
+        let windspeed = parseFloat(document.querySelector('#wind').value);
+        let output = temperature + windspeed;
+        document.querySelector('#output').innerHTML = `Wind Speed = ${output} <span>&#8457;</span>`;
     }
     
     </script>
