@@ -17,20 +17,23 @@
         <label>Temperature: <input type="text" id="temp"></label> <br>
         <label>Wind Speed: <input type="text" id="wind"></label> <br>
         <button onclick="doInputOutput()">Wind Chill</button>
-         <div id="output"></div>
+        <div id="output"></div>
     </main>
     <footer>
         &copy;<span id="copyright"></span> &bull; Tyler Hulet &bull; BYU-Idaho &bull; CIT 160
     </footer>
     <script>
         document.querySelector('#copyright').textContent = new Date().getFullYear();
-    function doInputOutput(){
-        let temperature = parseFloat(document.querySelector('#temp').value);
-        let windspeed = parseFloat(document.querySelector('#wind').value);
-        let output = temperature + windspeed;
-        document.querySelector('#output').innerHTML = `Wind Speed = ${output} <span>&#8457;</span>`;
-    }
-    
+        function doInputOutput() {
+            let temperature = parseFloat(document.querySelector('#temp').value);
+            let windspeed = parseFloat(document.querySelector('#wind').value);
+            if (temperature <= 50 && windspeed >= 3) {
+                windchill = temperature + windspeed;
+            } else {
+                windchill = `Please make sure the temp is 50 or below and the windspeed is 3 or higher`
+            }
+            document.querySelector('#output').innerHTML = `Wind Speed = ${windchill} <span>&#8457;</span>`;
+        }
     </script>
 </body>
 
