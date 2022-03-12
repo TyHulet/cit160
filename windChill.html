@@ -23,15 +23,19 @@
         &copy;<span id="copyright"></span> &bull; Tyler Hulet &bull; BYU-Idaho &bull; CIT 160
     </footer>
     <script>
+        document.querySelector('#copyright').textContent = new Date().getFullYear();
+    </script>
+    
+    <script>
         function doInputOutput() {
             let temperature = parseFloat(document.querySelector('#temp').value);
             let windspeed = parseFloat(document.querySelector('#wind').value);
-            //if (temperature <= 50 && windspeed >= 3) {
+            if (temperature <= 50 && windspeed >= 3) {
             output = windChill(temperature, windspeed);
-            //} else {
-                //output = `Please make sure the temp is 50 or below and the windspeed is 3 or higher`
-            //}
-            document.querySelector('#output').innerHTML = `Wind Speed = ${Math.round(output)} <span>&#8457;</span>`;
+            } else {
+            output = `N/A`
+            }
+            document.querySelector('#output').innerHTML = `Wind Speed = ${output.toFixed(2)} <span>&#8457;</span>`;
         }
         
         function windChill(tempF, speed) {
