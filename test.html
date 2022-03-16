@@ -7,22 +7,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<label>principal: <input type="text" id="principal"></label> <br>
-<label>annualRate: <input type="text" id="annualRate"></label> <br>
-<label>years: <input type="text" id="years"></label> <br>
-<label>periodsPerYear: <input type="text" id="periodsPerYear"></label> <br>
-<button onclick= "invest(principal, annualRate, years, periodsPerYear)">Fives Times Table</Table></button>
-<body>
-    <p id = "demo"></p> 
 
-<script>
-    function invest(principal, annualRate, years, periodsPerYear){
-    investment = principal * (Math.pow(1 + annualRate/years, periodsPerYear*years))
-      
-      document.getElementById("demo").innerHTML = investment.toFixed(2);
-    }
-</script>
+<body>
+    <label>principal: <input type="text" id="principal"></label> <br>
+    <label>annualRate: <input type="text" id="annualRate"></label> <br>
+    <label>years: <input type="text" id="years"></label> <br>
+    <label>periodsPerYear: <input type="text" id="periodsPerYear"></label> <br>
+    <div class="process"><button onclick="invest()">Fives Times Table</Table></button>
+        <p id="demo"></p>
+    </div>
     
+    <script>
+        function invest() {
+            let investment = 0;
+            let f = 0;
+            let amount = parseFloat(document.getElementById('principal').value);
+            let rate = parseFloat(document.getElementById('annualRate').value);
+            let date = parseFloat(document.getElementById('years').value);
+            let periods = parseFloat(document.getElementById('periodsPerYear').value);
+
+            
+             newrate = 1 + rate / periods;
+             newdate = date * periods;
+             rate2 = Math.pow(newrate, newdate);
+             f = amount * rate2; 
+            
+
+
+            document.getElementById("demo").innerHTML = f.toFixed(2);
+        }
+    </script>
+
 </body>
 
 </html>
