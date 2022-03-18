@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>investment</title>
+    <link rel="stylesheet" href="css/strings.css">
+</head>
+
+<body>
+    <header>
+        <h1>Investment Calulator</h1>
+        <h2>Cit 160</h2>
+    </header>
+    <main>
+    <h3>Enter your information below</h3>
+    <label>Principal: <input type="text" id="principal"></label> <br>
+    <label>AnnualRate %: <input type="text" id="annualRate" placeholder=".07"></label> <br>
+    <label>Years: <input type="text" id="years"></label> <br>
+    <label>PeriodsPerYear: <input type="text" id="periodsPerYear"></label> <br>
+    <div class="process"><button onclick="doFV()"> Invest </Table></button>
+        <p id="output"></p>
+    </div>
+</main>
+<footer>
+    &copy;<span id="copyright"></span> &bull; Tyler Hulet &bull; BYU-Idaho &bull; CIT 160
+</footer>
+ <script>
+      document.querySelector('#copyright').textContent = new Date().getFullYear();
+
+      
+        function doFV() {
+            let amount = parseFloat(document.getElementById('principal').value);
+            let rate = parseFloat(document.getElementById('annualRate').value);
+            let date = parseFloat(document.getElementById('years').value);
+            let periods = parseFloat(document.getElementById('periodsPerYear').value);
+            let output = 0;
+            output = computeFutureValue(amount, rate, date, periods)
+            document.getElementById("output").innerHTML = `Your investment will return $${output.toFixed(2)} in ${date} years.`;
+        }
+
+        function computeFutureValue(principal, annualRate, years, periodsPerYear) {
+            let f = 0;
+            newrate = 1 + annualRate / periodsPerYear;
+            newdate = years * periodsPerYear;
+            rate2 = Math.pow(newrate, newdate);
+            invest = principal * rate2;
+            return invest;
+        }
+    </script>
+
+</body>
+
+</html>
