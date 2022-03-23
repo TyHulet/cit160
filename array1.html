@@ -25,18 +25,19 @@ function test() {
     let sum2 = addEnds(list2);
 
     // Test the getMiddle function by calling it two times.
-    let mid1 = getMiddle(list1);
-    let mid2 = getMiddle(list2);
+    // let mid1 = getMiddle(list1);
+    // let mid2 = getMiddle(list2);
 
     // Build a string to display to the user.
-    let output = `Sum 1: ${sum1}<br> Sum 2: ${sum2}<br>Middle 1: ${mid1}<br>Middle 2: ${mid2}`;
+    let output = `Sum 1: ${sum1}<br> Sum 2: ${sum2}<br>`;
+    //Middle 1: ${mid1}<br>Middle 2: ${mid2}`;
 
     // Display the output string for the user to see.
     document.getElementById('output').innerHTML = output;
 }
 function addEnds(list){
-let sum1 = list[0 + 4];
-return sum1 
+let sum = list[0] + list[list.length - 1];
+return sum 
 }
     </script>
 
