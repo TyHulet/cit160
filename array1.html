@@ -43,10 +43,17 @@
         }
 
         function getMiddle(list) {
-            let mid = list[parseInt((list.length) / 2)];
-            let mid2 = list[parseInt((list.length - 1) / 2)];
-            output = (mid + mid2) / 2;
-            return output;
+            if (list.length % 2 === 0) {
+                let mid1 = list[Math.floor((list.length) / 2)];
+                let mid2 = list[Math.floor((list.length - 1) / 2)];
+                output = (mid1 + mid2) / 2;
+                return output;
+            }
+            else {
+                let mid = list[Math.floor(list.length / 2)];
+                output = mid;
+                return output;
+            }
         }
     </script>
 
