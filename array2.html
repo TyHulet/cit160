@@ -28,21 +28,23 @@
 
             // Test the multiply function by calling it two times.
             let mult1 = multiply(list1, 3);
-            // let mult2 = multiply(list2, 4);
+            let mult2 = multiply(list2, 4);
 
             // Build a string to display to the user.
             let output =
                 //count1 + '<br>' + count2 + '<br>' +
-                 mult1 
-                //+ '<br>' + mult2;
+                mult1 + '<br>' + mult2;
 
             // Display the output string for the user to see.
             document.getElementById('output').innerHTML = output;
 
             function multiply(list, multiplier) {
-                times = list * multiplier;
-                doubled = list.map(times); 
-                return doubled;
+                let result = []
+                for (let i = 0; i < list.length; i++) {
+                    result[i] = list[i] * multiplier;
+                }
+                return result;
+
             }
         }
     </script>
