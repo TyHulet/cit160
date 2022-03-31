@@ -23,8 +23,8 @@
             let list2 = [12, 4, 8, 15, 17, 5, 20, 11];
 
             // Test the countEvens function by calling it two times.
-            // let count1 = countEvens(list1);
-            // let count2 = countEvens(list2);
+             let count1 = countEvens(list1);
+             let count2 = countEvens(list2);
 
             // Test the multiply function by calling it two times.
             let mult1 = multiply(list1, 3);
@@ -32,12 +32,20 @@
 
             // Build a string to display to the user.
             let output =
-                //count1 + '<br>' + count2 + '<br>' +
+                count1 + '<br>' + count2 + '<br>' +
                 mult1 + '<br>' + mult2;
 
             // Display the output string for the user to see.
             document.getElementById('output').innerHTML = output;
 
+            function countEvens(list){
+                count = 0;
+                for (let i = 0; i < list.length; i++){
+                    
+                }
+            }
+            
+            
             function multiply(list, multiplier) {
                 let result = []
                 for (let i = 0; i < list.length; i++) {
