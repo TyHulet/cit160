@@ -41,8 +41,11 @@
             function countEvens(list){
                 count = 0;
                 for (let i = 0; i < list.length; i++){
-                    
+                    if (list[i] % 2 === 0){
+                        count = count + 1;
+                    }
                 }
+                return count;
             }
             
             
