@@ -39,13 +39,13 @@
             document.getElementById('output').innerHTML = output;
 
             function countEvens(list){
-                count = 0;
+                evenNum = 0;
                 for (let i = 0; i < list.length; i++){
                     if (list[i] % 2 === 0){
-                        count = count + 1;
+                        evenNum ++;
                     }
                 }
-                return count;
+                return evenNum;
             }
             
             
