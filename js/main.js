@@ -1,4 +1,4 @@
-//1. COMPLETE VARIABLE AND FUNCTION DEFINITIONS
+// 1. COMPLETE VARIABLE AND FUNCTION DEFINITIONS
 
 const customName = document.getElementById('customname');
 const randomize = document.querySelector('.randomize');
@@ -9,7 +9,7 @@ function randomValueFromArray(array) {
     return array[random];
 }
 
-//2. RAW TEXT STRINGS
+// 2. RAW TEXT STRINGS
 
 let storyText = `It was 94 fahrenheit outside, so :insertx: went 
 for a walk. When they got to :inserty:, they stared in horror for a few moments, then :insertz:. 
@@ -21,7 +21,7 @@ const insertY = ['the soup kitchen', 'Disneyland', 'the White House'];
 
 const insertZ = ['spontaneously combusted', 'melted into a puddle on the sidewalk', 'turned into a slug and crawled away'];
 
-//3. EVENT LISTENER AND PARTIAL FUNCTION DEFINITION
+// 3. EVENT LISTENER AND PARTIAL FUNCTION DEFINITION
 
 randomize.addEventListener('click', result);
 
